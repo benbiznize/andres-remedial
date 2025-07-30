@@ -119,4 +119,6 @@ header .container {
 
   /* Adjust spacing */
   header .container {
-    justify-content: s
+    justify-content: space-between;
+  }
+}
