@@ -9,3 +9,19 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-color: aqua;
+  border-style: dashed;
+}
+
+button {
+  color: aquamarine;
+  background-color: blue;
+  border-radius: 15%;
+  height: fit-content;
+  width: fit-content;
+}
