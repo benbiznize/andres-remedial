@@ -93,6 +93,11 @@ button.btn-secondary {
   color: inherit;
 }
 
+.btn-secondary a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .highlight {
   color: #007a55;
 }
@@ -222,26 +227,50 @@ div.service-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0 5px 10px var(--primary-color);
+  /* box-shadow: 0 2.5px 5px grey; */
   padding: 20px;
-  border: 2px solid whitesmoke;
+  border: 1.5px solid rgb(210, 209, 209);
   border-radius: 15px;
   text-align: justify;
+  font-size: medium;
+  font-weight: normal;
+  background-color: whitesmoke;
+}
+
+div.service-card h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .service-card div.icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   background: var(--icon-bg);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex: none;
-  box-shadow: 0 2px 5px grey;
 }
 
 .service-card img.icon {
   height: 22px;
   width: 22px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+ul li::marker {
+  color: var(--primary-color); /* Change 'blue' to your desired color */
+}
+
+h3.service-benefits {
+  color: var(--primary-color);
 }
