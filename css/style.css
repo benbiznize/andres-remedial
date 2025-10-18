@@ -1,3 +1,22 @@
+:root {
+  /* --- Colors --- */
+  --primary-color: #007a55;
+  --secondary-color: #a1f1d9;
+  /* --- Text --- */
+  --paragraph-text-color: rgb(110, 109, 109);
+  /* --- Sections --- */
+  --section-title-color: var(--primary-color);
+  --section-title-size: large;
+  --section-title-weight: lighter;
+  /* --- Others --- */
+  --icon-bg: #d6ffe9; /* soft mint like screenshot */
+  --icon-color: #065f46; /* dark teal icon */
+  --title: #0f172a; /* near-black */
+  --text: #334155; /* slate */
+  /* --- UVP Cards --- */
+  --uvp-card-title-color: var(--primary-color);
+}
+
 /* Remove default spacing from the page */
 * {
   margin: 0;
@@ -18,12 +37,6 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.logo {
-  font-size: 18px;
-  color: #1a7b6d; /* Teal color */
-  font-weight: normal;
-}
-
 nav {
   display: flex;
   gap: 35px; /* Space between each link */
@@ -37,11 +50,13 @@ nav a {
 }
 
 nav a:hover {
-  color: #1a7b6d; /* Changes to teal when you hover */
+  color: #007a55; /* Changes to teal when you hover */
 }
 
-.book-btn {
-  background-color: #1a7b6d; /* Teal background */
+.book-btn,
+.btn-primary {
+  text-decoration: none;
+  background-color: #007a55; /* Teal background */
   color: white;
   border: none; /* Removes default border */
   padding: 12px 28px; /* Space inside button */
@@ -51,6 +66,182 @@ nav a:hover {
   transition: background-color 0.3s; /* Smooth color change */
 }
 
-.book-btn:hover {
-  background-color: #156156; /* Slightly darker teal on hover */
+.book-btn:hover,
+.btn-primary:hover {
+  background-color: #00573d; /* Slightly darker teal on hover */
+}
+
+button.btn-secondary {
+  text-decoration: none;
+  border: 2px solid white;
+  background-color: #ffffff33; /* Teal background */
+  color: white;
+  padding: 12px 28px; /* Space inside button */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer; /* Shows hand cursor on hover */
+  transition: background-color 0.3s; /* Smooth color change */
+}
+
+.btn-secondary:hover {
+  background-color: #ffffff80;
+  color: black;
+}
+
+.book-btn a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.highlight {
+  color: #007a55;
+}
+
+.hero {
+  display: flex;
+  background-color: grey;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/images/image-hero.png);
+  color: white;
+  padding: 60px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.hero .content {
+  display: inherit;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: inherit;
+  gap: 30px;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
+.unique-value-proposition {
+  height: fit-content;
+  background-color: whitesmoke;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.unique-value-proposition div.content {
+  display: flex;
+}
+
+div.content .image-side,
+div.content .text-side {
+  width: 50%;
+  text-align: justify;
+  padding: 20px;
+}
+
+div.uvp-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+div.uvp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.uvp-card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uvp-card .text h2 {
+  color: var(--primary-color);
+  font-size: large;
+  font-weight: normal;
+}
+
+p {
+  color: var(--paragraph-text-color);
+}
+
+div.uvp-card:hover {
+  box-shadow: 0 2px 5px var(--primary-color);
+  transition: ease-in;
+}
+
+.uvp-card div.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--icon-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  box-shadow: 0 2px 5px grey;
+}
+
+.uvp-card img.icon {
+  height: 22px;
+  width: 22px;
+}
+
+.section-title {
+  color: var(--section-title-color);
+  font-size: var(--section-title-size);
+  font-weight: var(--section-title-weight);
+}
+
+section.our-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+div.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 20px;
+}
+
+div.service-card {
+  justify-content: space-evenly;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 5px 10px var(--primary-color);
+  padding: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 15px;
+  text-align: justify;
+}
+
+.service-card div.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--icon-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  box-shadow: 0 2px 5px grey;
+}
+
+.service-card img.icon {
+  height: 22px;
+  width: 22px;
 }
