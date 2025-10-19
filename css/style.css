@@ -67,6 +67,21 @@ header {
   z-index: 1000;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+section h1 {
+  color: var(--primary-color);
+  font-size: x-large;
+}
+
 section.hero {
   display: flex;
   justify-content: center;
@@ -209,7 +224,7 @@ h3 {
   letter-spacing: -0.01em;
 }
 p {
-  margin: 0 0 1rem;
+  /* margin: 0 0 1rem; */
 }
 h1 {
   font-size: var(--h1);
@@ -230,4 +245,42 @@ small,
   h3 {
     font-variation-settings: "opsz" 72;
   } /* Fraunces optical size */
+}
+
+div.uvp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.uvp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+div.uvp-card div.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+div.uvp-card div.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+div.uvp-card div.text {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid blue; */
+  flex: 1;
 }
