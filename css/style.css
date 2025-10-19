@@ -186,3 +186,48 @@ a.btn-primary {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+:root {
+  --text: 16px; /* base size */
+  --lh: 1.6; /* comfortable line-height */
+  --h1: clamp(2rem, 3.5vw, 3rem);
+  --h2: clamp(1.5rem, 2.5vw, 2rem);
+}
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: var(--text);
+  line-height: var(--lh);
+  color: #111;
+}
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+p {
+  margin: 0 0 1rem;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+small,
+.eyebrow {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/* Optional: slightly softer headings */
+@supports (font-variation-settings: normal) {
+  h1,
+  h2,
+  h3 {
+    font-variation-settings: "opsz" 72;
+  } /* Fraunces optical size */
+}
