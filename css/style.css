@@ -1,276 +1,188 @@
 :root {
   /* --- Colors --- */
-  --primary-color: #007a55;
-  --secondary-color: #a1f1d9;
+  --primary-color: #719b7f;
+  --primary-color-dark: #516f5b;
+  --secondary-color: #c4ddd6;
   /* --- Text --- */
   --paragraph-text-color: rgb(110, 109, 109);
-  /* --- Sections --- */
-  --section-title-color: var(--primary-color);
-  --section-title-size: large;
-  --section-title-weight: lighter;
-  /* --- Others --- */
-  --icon-bg: #d6ffe9; /* soft mint like screenshot */
-  --icon-color: #065f46; /* dark teal icon */
-  --title: #0f172a; /* near-black */
-  --text: #334155; /* slate */
-  /* --- UVP Cards --- */
-  --uvp-card-title-color: var(--primary-color);
 }
 
-/* Remove default spacing from the page */
-* {
+/* START of CSS Reset --- */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px dashed red; */
+  text-decoration: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
 }
 
-header {
-  display: flex; /* Makes items sit in a row */
-  justify-content: space-between; /* Spreads items apart */
-  align-items: center; /* Centers items vertically */
-  padding: 20px 40px; /* Space inside the header (top/bottom, left/right) */
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-nav {
-  display: flex;
-  gap: 35px; /* Space between each link */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-nav a {
-  text-decoration: none; /* Removes underline */
-  color: #333; /* Dark gray */
-  font-size: 16px;
-  transition: color 0.3s; /* Smooth color change on hover */
-}
-
-nav a:hover {
-  color: #007a55; /* Changes to teal when you hover */
-}
-
-.book-btn,
-.btn-primary {
-  text-decoration: none;
-  background-color: #007a55; /* Teal background */
-  color: white;
-  border: none; /* Removes default border */
-  padding: 12px 28px; /* Space inside button */
-  border-radius: 6px; /* Rounded corners */
-  font-size: 16px;
-  cursor: pointer; /* Shows hand cursor on hover */
-  transition: background-color 0.3s; /* Smooth color change */
-}
-
-.book-btn:hover,
-.btn-primary:hover {
-  background-color: #00573d; /* Slightly darker teal on hover */
-}
-
-button.btn-secondary {
-  text-decoration: none;
-  border: 2px solid white;
-  background-color: #ffffff33; /* Teal background */
-  color: white;
-  padding: 12px 28px; /* Space inside button */
-  border-radius: 6px; /* Rounded corners */
-  font-size: 16px;
-  cursor: pointer; /* Shows hand cursor on hover */
-  transition: background-color 0.3s; /* Smooth color change */
-}
-
-.btn-secondary:hover {
-  background-color: #ffffff80;
-  color: black;
-}
-
-.book-btn a {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.btn-secondary a {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.highlight {
-  color: #007a55;
-}
-
-.hero {
-  display: flex;
-  background-color: grey;
-  height: 400px;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/assets/images/image-hero.png);
-  color: white;
-  padding: 60px;
-  padding-left: 300px;
-  padding-right: 300px;
-}
-
-.hero .content {
-  display: inherit;
-  flex-direction: column;
-  justify-content: inherit;
-  align-items: inherit;
-  gap: 30px;
-  text-align: center;
-}
-
-.btns {
-  display: flex;
-  gap: 20px;
-}
-
-.unique-value-proposition {
-  height: fit-content;
-  background-color: whitesmoke;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.unique-value-proposition div.content {
-  display: flex;
-}
-
-div.content .image-side,
-div.content .text-side {
-  width: 50%;
-  text-align: justify;
-  padding: 20px;
-}
-
-div.uvp-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 20px;
-}
-
-div.uvp-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.uvp-card .text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.uvp-card .text h2 {
-  color: var(--primary-color);
-  font-size: large;
-  font-weight: normal;
-}
-
-p {
-  color: var(--paragraph-text-color);
-}
-
-div.uvp-card:hover {
-  box-shadow: 0 2px 5px var(--primary-color);
-  transition: ease-in;
-}
-
-.uvp-card div.icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--icon-bg);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  box-shadow: 0 2px 5px grey;
-}
-
-.uvp-card img.icon {
-  height: 22px;
-  width: 22px;
-}
-
-.section-title {
-  color: var(--section-title-color);
-  font-size: var(--section-title-size);
-  font-weight: var(--section-title-weight);
-}
-
-section.our-services {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-
-div.services {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  gap: 20px;
-}
-
-div.service-card {
-  justify-content: space-evenly;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  /* box-shadow: 0 2.5px 5px grey; */
-  padding: 20px;
-  border: 1.5px solid rgb(210, 209, 209);
-  border-radius: 15px;
-  text-align: justify;
-  font-size: medium;
-  font-weight: normal;
-  background-color: whitesmoke;
-}
-
-div.service-card h1,
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: inherit;
+  overflow-wrap: break-word;
+}
+/* --- END of CSS Reset */
+
+header {
+  background: #e5f0ee;
+  position: sticky;
+  top: 0;
+  color: whitesmoke;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
 }
 
-.service-card div.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--icon-bg);
-  display: inline-flex;
+section.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 500px;
+  background-image: url(/assets/images/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+section.hero div.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* backdrop-filter: blur(10px); */
+  padding: 20px;
+  gap: 10px;
+}
+
+section.hero div.content div.cta {
+  display: flex;
+  flex-direction: column;
+  /* justify-items: center;
+  align-items: center; */
+  gap: 10px;
+}
+
+img.icon {
+  width: 20px;
+  height: 20px;
+}
+
+a.btn-primary {
+  backdrop-filter: blur(10px);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: large;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
   align-items: center;
   justify-content: center;
-  flex: none;
+  text-align: center;
+  text-decoration: none;
 }
 
-.service-card img.icon {
-  height: 22px;
-  width: 22px;
+.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+  transition: background-color 0.3s, color 0.3s;
+  color: whitesmoke;
 }
 
-ul {
-  list-style-position: inside;
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.535);
+  color: rgb(68, 67, 67);
+  font-size: large;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border: 2px solid whitesmoke;
 }
 
-ul li::marker {
-  color: var(--primary-color); /* Change 'blue' to your desired color */
+.btn-secondary:hover {
+  background-color: rgba(76, 76, 76, 0.535);
+  color: whitesmoke;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-h3.service-benefits {
+.book-btn {
+  background-color: var(--secondary-color);
   color: var(--primary-color);
+  font-size: large;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--primary-color-dark);
+}
+
+.book-btn:hover {
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 10px;
+  gap: 5px;
+  border: 2px solid white;
+}
+
+.hero h1 {
+  background-color: whitesmoke;
+  color: grey;
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: large;
+  font-weight: normal;
+}
+
+.highlight {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: bold;
 }
