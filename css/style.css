@@ -262,7 +262,7 @@ div.uvp-card {
   border-radius: 8px;
 }
 
-div.uvp-card div.icon {
+div.icon {
   width: 50px;
   height: 50px;
   display: flex;
@@ -273,7 +273,7 @@ div.uvp-card div.icon {
   flex-shrink: 0;
 }
 
-div.uvp-card div.icon img {
+div.icon img {
   width: 30px;
   height: 30px;
 }
@@ -283,4 +283,49 @@ div.uvp-card div.text {
   flex-direction: column;
   /* border: 2px solid blue; */
   flex: 1;
+}
+
+.service-card * {
+  /* border: 1px dashed blue; */
+}
+
+.service-card {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+h3.service-benefits {
+  color: var(--primary-color);
+}
+
+.service-card div.icon {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.service-thumbnail {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.service-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.service-card .book-btn {
+  color: black;
+  background-color: #516f5b;
 }
